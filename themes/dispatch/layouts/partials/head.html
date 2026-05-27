@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  {{- if .IsHome -}}
+    {{ .Site.Title }} — {{ .Site.Params.tagline }}
+  {{- else -}}
+    {{ .Title }} · {{ .Site.Title }}
+  {{- end -}}
+</title>
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.tagline }}{{ end }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{{/*
+  Playfair Display is the web-safe stand-in for Cream Cake.
+  To use Cream Cake: add a @font-face block in dispatch.css pointing to
+  your self-hosted font files, then update font-family references.
+*/}}
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ "css/dispatch.css" | relURL }}">
+{{ with .OutputFormats.Get "rss" -}}
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title }} Field Reports">
+{{- end }}

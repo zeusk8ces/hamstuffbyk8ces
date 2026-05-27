@@ -1,0 +1,47 @@
+baseURL = "https://hamstuffbyk8ces.com/"
+languageCode = "en-us"
+title = "K8CES"
+theme = "dispatch"
+paginate = 10
+summaryLength = 40
+
+[params]
+  callsign = "K8CES"
+  name     = "Jesus"
+  handle   = "Zeus"
+  tagline  = "Amateur Radio Operator · Parks on the Air · CW"
+  location = "Michigan"
+  youtube  = "https://www.youtube.com/@ZeusK8CES"
+  qrz      = "https://www.qrz.com/db/K8CES"
+
+[taxonomies]
+  tag  = "tags"
+  band = "bands"
+
+[menu]
+  [[menu.main]]
+    name   = "K8CES"
+    url    = "/"
+    weight = 1
+  [[menu.main]]
+    name   = "Field Reports"
+    url    = "/field-reports/"
+    weight = 2
+  [[menu.main]]
+    name   = "3D Designs"
+    url    = "/3d-designs/"
+    weight = 3
+  [[menu.main]]
+    name   = "About"
+    url    = "/about/"
+    weight = 4
+  [[menu.main]]
+    name   = "Photos"
+    url    = "/photos/"
+    weight = 5
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.highlight]
+  noClasses = false

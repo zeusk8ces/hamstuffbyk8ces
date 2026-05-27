@@ -1,0 +1,10 @@
+<footer>
+  <a href="{{ "/" | relURL }}" class="footer-callsign">{{ .Site.Params.callsign }}</a>
+  <nav class="footer-nav" aria-label="Footer navigation">
+    {{ range .Site.Menus.main }}
+    <a href="{{ .URL }}">{{ .Name }}</a>
+    {{ end }}
+    <a href="{{ .Site.Params.youtube }}" target="_blank" rel="noopener">YouTube</a>
+  </nav>
+  <div class="footer-sig">{{ .Site.Params.name }} · {{ .Site.Params.callsign }} · 72</div>
+</footer>

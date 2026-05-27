@@ -1,0 +1,9 @@
+name = "Dispatch"
+license = "MIT"
+licenselink = ""
+description = "Warm editorial theme for K8CES amateur radio site"
+homepage = "https://k8ces.com"
+min_version = "0.120.0"
+
+[author]
+  name = "K8CES"

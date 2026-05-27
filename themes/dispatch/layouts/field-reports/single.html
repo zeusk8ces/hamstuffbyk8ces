@@ -1,0 +1,67 @@
+{{ define "main" }}
+
+<article>
+
+  {{/* ── REPORT HEADER ── */}}
+  <header class="report-header">
+    <p class="report-overline">
+      <a href="{{ "/field-reports/" | relURL }}">Field Reports</a>
+      {{ with .Params.park_id }} · {{ . }}{{ end }}
+      · {{ .Date.Format "January 2, 2006" }}
+    </p>
+    <h1 class="report-title">{{ .Title }}</h1>
+    {{ with .Params.park_name }}
+    <p class="report-park-name">{{ . }}{{ with $.Params.state }}, {{ . }}{{ end }}</p>
+    {{ end }}
+
+    <div class="stats-bar">
+      <div class="stat">
+        <span class="stat-value">{{ .Params.total_qsos | default "—" }}</span>
+        <span class="stat-label">QSOs</span>
+      </div>
+      {{ with .Params.s2s_qsos }}
+      <div class="stat">
+        <span class="stat-value">{{ . }}</span>
+        <span class="stat-label">S2S</span>
+      </div>
+      {{ end }}
+      {{ with .Params.duration_minutes }}
+      <div class="stat">
+        <span class="stat-value">{{ . }}m</span>
+        <span class="stat-label">Duration</span>
+      </div>
+      {{ end }}
+      {{ with .Params.power }}
+      <div class="stat">
+        <span class="stat-value">{{ . }}</span>
+        <span class="stat-label">Power</span>
+      </div>
+      {{ end }}
+      {{ with .Params.mode }}
+      <div class="stat">
+        <span class="stat-value">{{ . }}</span>
+        <span class="stat-label">Mode</span>
+      </div>
+      {{ end }}
+    </div>
+
+    {{ with .Params.tags }}
+    <div class="report-tags">
+      {{ range . }}<span class="post-tag">{{ . }}</span>{{ end }}
+    </div>
+    {{ end }}
+  </header>
+
+  {{/* ── TWO-COLUMN BODY ── */}}
+  <div class="content-grid">
+    <div class="main-col report-body">
+      {{ .Content }}
+    </div>
+    <aside class="rail-col">
+      {{ partial "field-report-meta.html" . }}
+    </aside>
+  </div>
+
+</article>
+
+{{ end }}

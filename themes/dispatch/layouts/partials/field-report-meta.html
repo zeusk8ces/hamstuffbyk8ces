@@ -1,0 +1,73 @@
+{{/* Operation details */}}
+<div class="rail-block">
+  <div class="rail-rule"></div>
+  <p class="rail-label">Operation</p>
+  <table class="meta-table">
+    {{ with .Params.radio }}<tr><th>Radio</th><td>{{ . }}</td></tr>{{ end }}
+    {{ with .Params.antenna }}<tr><th>Antenna</th><td>{{ . }}</td></tr>{{ end }}
+    {{ with .Params.keyer }}<tr><th>Keyer</th><td>{{ . }}</td></tr>{{ end }}
+    {{ with .Params.mode }}<tr><th>Mode</th><td>{{ . }}</td></tr>{{ end }}
+    {{ with .Params.power }}<tr><th>Power</th><td>{{ . }}</td></tr>{{ end }}
+    {{ with .Params.band }}<tr><th>Bands</th><td>{{ delimit . ", " }}</td></tr>{{ end }}
+    {{ with .Params.freq_primary }}<tr><th>Freq</th><td>{{ . }} MHz</td></tr>{{ end }}
+    {{ with .Params.conditions }}<tr><th>Conditions</th><td>{{ . }}</td></tr>{{ end }}
+    {{ with .Params.weather }}<tr><th>Weather</th><td>{{ . }}</td></tr>{{ end }}
+  </table>
+</div>
+
+{{/* Park info */}}
+{{ with .Params.park_id }}
+<div class="rail-block">
+  <div class="rail-rule"></div>
+  <p class="rail-label">Park</p>
+  <p class="park-id-display">{{ . }}</p>
+  {{ with $.Params.park_name }}
+  <p class="park-name-display">{{ . }}{{ with $.Params.state }}, {{ . }}{{ end }}</p>
+  {{ end }}
+  <a href="https://pota.app/#/park/{{ . }}" target="_blank" rel="noopener" class="read-more">View on POTA.app ↗</a>
+</div>
+{{ end }}
+
+{{/* S2S contacts */}}
+{{ with .Params.s2s_callsigns }}
+<div class="rail-block">
+  <div class="rail-rule"></div>
+  <p class="rail-label">Summit to Summit</p>
+  <ul class="s2s-list">
+    {{ range . }}<li>{{ . }}</li>{{ end }}
+  </ul>
+</div>
+{{ end }}
+
+{{/* YouTube video if attached */}}
+{{ with .Params.youtube_url }}
+<div class="rail-block">
+  <div class="rail-rule"></div>
+  <p class="rail-label">Video</p>
+  <a href="{{ . }}" target="_blank" rel="noopener" class="yt-card">
+    <p class="yt-card-eyebrow">YouTube</p>
+    <p class="yt-card-name">Watch Activation</p>
+    <p class="yt-card-sub">Video from this field report</p>
+  </a>
+</div>
+{{ end }}
+
+{{/* Recent field reports — exclude current page */}}
+{{ $currentPage := . }}
+{{ $others := where .Site.RegularPages "Section" "field-reports" }}
+{{ $others = where $others "Permalink" "ne" $currentPage.Permalink }}
+{{ if $others }}
+<div class="rail-block">
+  <div class="rail-rule"></div>
+  <p class="rail-label">More Activations</p>
+  <div class="quick-links">
+    {{ range first 4 $others }}
+    <a href="{{ .RelPermalink }}" class="quick-link">
+      <span>{{ .Title | truncate 36 }}</span>
+      <span class="quick-link-arrow">→</span>
+    </a>
+    {{ end }}
+  </div>
+  <a href="{{ "/field-reports/" | relURL }}" class="read-more" style="margin-top:12px;display:inline-block">All field reports →</a>
+</div>
+{{ end }}

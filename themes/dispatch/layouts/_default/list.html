@@ -1,0 +1,35 @@
+{{ define "main" }}
+
+<div class="page-header">
+  <p class="page-overline">{{ $.Site.Params.callsign }}</p>
+  <h1 class="page-title">{{ .Title }}</h1>
+  {{ with .Content }}<p class="page-subtitle">{{ . }}</p>{{ end }}
+  <div class="page-rule"></div>
+</div>
+
+<div class="content-grid">
+  <main class="main-col">
+    {{ range .Paginator.Pages }}
+    <article class="post">
+      <p class="post-meta">{{ .Date.Format "January 2, 2006" }}</p>
+      <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <p class="post-excerpt">{{ .Summary }}</p>
+      <a href="{{ .RelPermalink }}" class="read-more">Read more →</a>
+    </article>
+    {{ end }}
+    {{ partial "pagination.html" . }}
+  </main>
+  <aside class="rail-col">
+    <div class="rail-block">
+      <div class="rail-rule"></div>
+      <p class="rail-label">Watch Along</p>
+      <a href="{{ .Site.Params.youtube }}" target="_blank" rel="noopener" class="yt-card">
+        <p class="yt-card-eyebrow">YouTube</p>
+        <p class="yt-card-name">@ZeusK8CES</p>
+        <p class="yt-card-sub">Field activations &amp; the CW journey</p>
+      </a>
+    </div>
+  </aside>
+</div>
+
+{{ end }}

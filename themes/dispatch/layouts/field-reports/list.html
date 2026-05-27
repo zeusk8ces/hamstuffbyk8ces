@@ -1,0 +1,101 @@
+{{ define "main" }}
+
+{{ $allReports := where .Site.RegularPages "Section" "field-reports" }}
+
+{{/* Cumulative stats across all activations */}}
+{{ $totalQSOs := 0 }}
+{{ $totalS2S  := 0 }}
+{{ range $allReports }}
+  {{ $totalQSOs = add $totalQSOs (.Params.total_qsos | default 0) }}
+  {{ $totalS2S  = add $totalS2S  (.Params.s2s_qsos   | default 0) }}
+{{ end }}
+
+<div class="report-header">
+  <p class="report-overline">{{ $.Site.Params.callsign }}</p>
+  <h1 class="page-title">Field Reports</h1>
+  <p class="page-subtitle">POTA activations, trip notes, and observations from the field.</p>
+  <div class="stats-bar">
+    <div class="stat">
+      <span class="stat-value">{{ len $allReports }}</span>
+      <span class="stat-label">Activations</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value">{{ $totalQSOs }}</span>
+      <span class="stat-label">Total QSOs</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value">{{ $totalS2S }}</span>
+      <span class="stat-label">S2S</span>
+    </div>
+  </div>
+</div>
+
+<div class="content-grid">
+
+  <main class="main-col">
+    <p class="col-label">All Activations</p>
+
+    {{ range .Paginator.Pages }}
+    <article class="post">
+      <p class="post-meta">
+        {{ .Date.Format "January 2, 2006" }}
+        {{ with .Params.park_id }} · <a href="https://pota.app/#/park/{{ . }}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid currentColor">{{ . }}</a>{{ end }}
+        {{ with .Params.total_qsos }} · {{ . }} QSOs{{ end }}
+        {{ with .Params.mode }} · {{ . }}{{ end }}
+      </p>
+      <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      {{ with .Params.park_name }}
+      <p class="post-park">{{ . }}{{ with $.Params.state }}, {{ . }}{{ end }}</p>
+      {{ end }}
+      <p class="post-excerpt">{{ .Summary }}</p>
+      {{ with .Params.tags }}
+      <div class="post-tags">{{ range . }}<span class="post-tag">{{ . }}</span>{{ end }}</div>
+      {{ end }}
+      <a href="{{ .RelPermalink }}" class="read-more">Read full report →</a>
+    </article>
+    {{ end }}
+
+    {{ partial "pagination.html" . }}
+  </main>
+
+  <aside class="rail-col">
+
+    <div class="rail-block">
+      <div class="rail-rule"></div>
+      <p class="rail-label">Watch Along</p>
+      <a href="{{ .Site.Params.youtube }}" target="_blank" rel="noopener" class="yt-card">
+        <p class="yt-card-eyebrow">YouTube Channel</p>
+        <p class="yt-card-name">@ZeusK8CES</p>
+        <p class="yt-card-sub">Video from field activations</p>
+      </a>
+    </div>
+
+    {{ with .Site.Taxonomies.tags }}
+    <div class="rail-block">
+      <div class="rail-rule"></div>
+      <p class="rail-label">Tags</p>
+      <div class="tag-cloud">
+        {{ range . }}
+        <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
+    <div class="rail-block">
+      <div class="rail-rule"></div>
+      <p class="rail-label">Quick Links</p>
+      <div class="quick-links">
+        <a href="https://pota.app" target="_blank" rel="noopener" class="quick-link">
+          <span>POTA.app</span><span class="quick-link-arrow">↗</span>
+        </a>
+        <a href="{{ .Site.Params.qrz }}" target="_blank" rel="noopener" class="quick-link">
+          <span>QRZ · {{ .Site.Params.callsign }}</span><span class="quick-link-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+{{ end }}

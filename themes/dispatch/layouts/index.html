@@ -1,0 +1,134 @@
+{{ define "main" }}
+
+{{/* ── HERO ── */}}
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-overline">{{ .Site.Params.tagline }}</p>
+    <h1 class="hero-callsign">{{ .Site.Params.callsign }}</h1>
+    <p class="hero-name">{{ .Site.Params.name }} — Parks on the Air &amp; CW</p>
+    <div class="hero-rule"></div>
+    <p class="hero-bio">{{ .Content }}</p>
+    <div class="hero-tags">
+      <span class="hero-tag">POTA</span>
+      <span class="hero-tag">CW · Morse</span>
+      <span class="hero-tag">QRP</span>
+      <span class="hero-tag">3D Printing</span>
+      <span class="hero-tag">Field Radio</span>
+    </div>
+  </div>
+
+  {{/* Morse code of K8CES — decorative */}}
+  <div class="hero-morse" aria-hidden="true">
+    <div class="morse-row"><span class="morse-char">K</span><div class="dah"></div><div class="morse-gap"></div><div class="dit"></div><div class="morse-gap"></div><div class="dah"></div></div>
+    <div class="morse-row"><span class="morse-char">8</span><div class="dah"></div><div class="morse-gap"></div><div class="dah"></div><div class="morse-gap"></div><div class="dah"></div><div class="morse-gap"></div><div class="dit"></div><div class="morse-gap"></div><div class="dit"></div></div>
+    <div class="morse-row"><span class="morse-char">C</span><div class="dah"></div><div class="morse-gap"></div><div class="dit"></div><div class="morse-gap"></div><div class="dah"></div><div class="morse-gap"></div><div class="dit"></div></div>
+    <div class="morse-row"><span class="morse-char">E</span><div class="dit"></div></div>
+    <div class="morse-row"><span class="morse-char">S</span><div class="dit"></div><div class="morse-gap"></div><div class="dit"></div><div class="morse-gap"></div><div class="dit"></div></div>
+  </div>
+</section>
+
+{{/* ── MAIN GRID ── */}}
+<div class="content-grid">
+
+  {{/* Left: recent field reports */}}
+  <main class="main-col">
+    <p class="col-label">From the Field</p>
+    <h2 class="col-heading">Recent Activations</h2>
+
+    {{ $reports := where .Site.RegularPages "Section" "field-reports" }}
+    {{ range first 3 $reports }}
+    <article class="post">
+      <p class="post-meta">
+        {{ .Date.Format "January 2, 2006" }}
+        {{ with .Params.park_id }} · <a href="https://pota.app/#/park/{{ . }}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid currentColor">{{ . }}</a>{{ end }}
+        {{ with .Params.total_qsos }} · {{ . }} QSOs{{ end }}
+      </p>
+      <h3 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      {{ with .Params.park_name }}<p class="post-park">{{ . }}{{ with $.Params.state }}, {{ . }}{{ end }}</p>{{ end }}
+      <p class="post-excerpt">{{ .Summary }}</p>
+      {{ with .Params.tags }}
+      <div class="post-tags">{{ range . }}<span class="post-tag">{{ . }}</span>{{ end }}</div>
+      {{ end }}
+      <a href="{{ .RelPermalink }}" class="read-more">Read full report →</a>
+    </article>
+    {{ end }}
+
+    {{ if gt (len $reports) 3 }}
+    <a href="{{ "/field-reports/" | relURL }}" class="read-more" style="display:inline-block;margin-top:8px">All field reports →</a>
+    {{ end }}
+  </main>
+
+  {{/* Right: rail */}}
+  <aside class="rail-col">
+
+    <div class="rail-block">
+      <div class="rail-rule"></div>
+      <p class="rail-label">Watch Along</p>
+      <a href="{{ .Site.Params.youtube }}" target="_blank" rel="noopener" class="yt-card">
+        <p class="yt-card-eyebrow">YouTube Channel</p>
+        <p class="yt-card-name">@ZeusK8CES</p>
+        <p class="yt-card-sub">Field activations, gear talk &amp; the CW learning journey</p>
+      </a>
+    </div>
+
+    <div class="rail-block">
+      <div class="rail-rule"></div>
+      <p class="rail-label">About</p>
+      <p class="about-text">
+        Hey — I'm {{ .Site.Params.name }}, {{ .Site.Params.callsign }}. I'm a newer ham operator working on
+        my CW skills and documenting Parks on the Air activations along the way.
+      </p>
+      <a href="{{ "/about/" | relURL }}" class="read-more">More about me →</a>
+      <p class="about-sig" style="margin-top:12px">72, Zeus</p>
+    </div>
+
+    <div class="rail-block">
+      <div class="rail-rule"></div>
+      <p class="rail-label">3D Designs</p>
+      <div class="design-grid">
+        <a href="{{ "/3d-designs/" | relURL }}" class="design-tile">Feed Point</a>
+        <a href="{{ "/3d-designs/" | relURL }}" class="design-tile">Stake</a>
+        <a href="{{ "/3d-designs/" | relURL }}" class="design-tile">Key Mount</a>
+        <a href="{{ "/3d-designs/" | relURL }}" class="design-tile">View All →</a>
+      </div>
+    </div>
+
+    <div class="rail-block">
+      <div class="rail-rule"></div>
+      <p class="rail-label">Quick Links</p>
+      <div class="quick-links">
+        <a href="https://pota.app" target="_blank" rel="noopener" class="quick-link">
+          <span>Parks on the Air</span><span class="quick-link-arrow">↗</span>
+        </a>
+        <a href="{{ .Site.Params.qrz }}" target="_blank" rel="noopener" class="quick-link">
+          <span>QRZ · {{ .Site.Params.callsign }}</span><span class="quick-link-arrow">↗</span>
+        </a>
+        <a href="{{ .Site.Params.youtube }}" target="_blank" rel="noopener" class="quick-link">
+          <span>YouTube Channel</span><span class="quick-link-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+{{/* ── PHOTO STRIP ── */}}
+<section class="photo-strip">
+  <div class="photo-strip-header">
+    <h2 class="photo-strip-heading">Photo Dump</h2>
+    <a href="{{ "/photos/" | relURL }}" class="photo-strip-link">View all →</a>
+  </div>
+  <div class="photo-grid">
+    {{/*
+      Replace these divs with <img> tags once you have photos:
+      <div class="photo-slot"><img src="/photos/your-image.jpg" alt="Description"></div>
+    */}}
+    <div class="photo-slot"></div>
+    <div class="photo-slot"></div>
+    <div class="photo-slot"></div>
+    <div class="photo-slot"></div>
+    <div class="photo-slot"></div>
+  </div>
+</section>
+
+{{ end }}

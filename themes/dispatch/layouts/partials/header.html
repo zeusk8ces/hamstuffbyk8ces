@@ -1,0 +1,40 @@
+<aside class="sidebar" id="sidebar" aria-label="Site navigation">
+  <div class="sidebar-header">
+    <a href="{{ "/" | relURL }}" class="sidebar-callsign">{{ .Site.Params.callsign }}</a>
+    <div class="sidebar-name">{{ .Site.Params.name }}</div>
+    <button class="sidebar-close" onclick="closeSidebar()" aria-label="Close navigation">×</button>
+  </div>
+  <nav>
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+      {{ $isActive := false }}
+      {{ if eq .URL "/" }}
+        {{ $isActive = $currentPage.IsHome }}
+      {{ else }}
+        {{ $isActive = hasPrefix $currentPage.RelPermalink .URL }}
+      {{ end }}
+      <a href="{{ .URL }}"{{ if $isActive }} class="active"{{ end }}>
+        <span class="nav-dot"></span>{{ .Name }}
+      </a>
+    {{ end }}
+    <a href="{{ .Site.Params.youtube }}" target="_blank" rel="noopener" class="yt">
+      <span class="nav-dot"></span>YouTube ↗
+    </a>
+  </nav>
+  <div class="sidebar-footer">{{ .Site.Params.name }} · {{ .Site.Params.callsign }} · 72</div>
+</aside>
+
+<header class="topbar">
+  <button class="hamburger" id="hamburger" onclick="toggleSidebar()" aria-label="Toggle navigation">
+    <span class="bar bar-1"></span>
+    <span class="bar bar-2"></span>
+    <span class="bar bar-3"></span>
+  </button>
+  <a href="{{ "/" | relURL }}" class="topbar-logo">{{ .Site.Params.callsign }}</a>
+  <nav class="topbar-nav" aria-label="Top navigation">
+    {{ range .Site.Menus.main }}
+    <a href="{{ .URL }}">{{ .Name }}</a>
+    {{ end }}
+    <a href="{{ .Site.Params.youtube }}" target="_blank" rel="noopener" class="yt-btn">▶ YouTube</a>
+  </nav>
+</header>
