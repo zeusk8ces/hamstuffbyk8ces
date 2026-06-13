@@ -1,7 +1,7 @@
 ---
 title: "About"
 date: 2026-06-13
-### description: "About Jesus, K8CES — amateur radio operator, QRP Portable operator, CW learner."
+description: "About Jesus, K8CES — amateur radio operator, QRP Portable operator, CW learner."
 ---
 
 Hey — I'm Jesus, callsign K8CES. I'm a relatively new amateur radio operator out of Michigan, and this site is where I document the journey.
@@ -81,7 +81,7 @@ I got into ham radio and dove pretty quickly into CW (Morse code) and Parks on t
 
 ## What I'm Working On
 
-POTA activations are the main draw right now. I'm also into 3D printing — mostly accessories for portable operation. Feed point holders, antenna stakes, paddle mounts. If I need it and can't find it, I'll design it.
+There's a few things lined up for me as far as prints go. I plan on making a yet another wire winder variant because why not. Also I plan on making a KH1/KX2 variants of the Zippy. As time allows I dive into these projects.
 
 ## This Site
 
