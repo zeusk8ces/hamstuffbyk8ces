@@ -10,9 +10,9 @@ I got into ham radio and dove pretty quickly into CW (Morse code) and Parks on t
 
 ## The Gear
 
-- **Radio:** Elecraft KX2
-- **Antenna:** Linked dipole (40/20m)
-- **Power:** 10W QRP
+- **Radio:** Yaesu FT-817
+- **Antenna:** KM4CFT EFHW (30M/40M Links)
+- **Power:** 5W QRP
 - **Logging:** Paper first, digital later
 
 ## What I'm Working On
