@@ -1,4 +1,4 @@
 ---
 title: "3D Designs"
-description: "Printable accessories for portable radio operation — Zippy Paddle, Knee Board, Wire Winders, and more."
+description: "Printable accessories for portable radio operation — Zippy Paddle, Knee Board, and more to come!"
 ---

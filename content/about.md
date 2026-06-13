@@ -1,7 +1,7 @@
 ---
 title: "About"
-date: 2026-0613
-description: "About Jesus, K8CES — amateur radio operator, POTA activator, CW learner."
+date: 2026-06-13
+description: "About Jesus, K8CES — amateur radio operator, QRP Portable operator, CW learner."
 ---
 
 Hey — I'm Jesus, callsign K8CES. I'm a relatively new amateur radio operator out of Michigan, and this site is where I document the journey.
