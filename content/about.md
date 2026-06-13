@@ -1,12 +1,12 @@
 ---
 title: "About"
-date: 2026-01-01
+date: 2026-0613
 description: "About Jesus, K8CES — amateur radio operator, POTA activator, CW learner."
 ---
 
 Hey — I'm Jesus, callsign K8CES. I'm a relatively new amateur radio operator out of Michigan, and this site is where I document the journey.
 
-I got into ham radio and dove pretty quickly into CW (Morse code) and Parks on the Air. There's something about getting out to a park, setting up a field antenna, and making contacts across the country, sometimes around the world, on 5 watts that never gets old.
+I got into ham radio and dove pretty quickly into CW (Morse code) and Parks on the Air. There's something about getting out to a park, setting up a field antenna, and making contacts across the country or around the world on 5 watts that never gets old.
 
 ## The Gear
 
