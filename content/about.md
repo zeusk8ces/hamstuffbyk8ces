@@ -6,12 +6,26 @@ description: "About Jesus, K8CES — amateur radio operator, POTA activator, CW 
 
 Hey — I'm Jesus, callsign K8CES. I'm a relatively new amateur radio operator out of Michigan, and this site is where I document the journey.
 
-I got into ham radio and dove pretty quickly into CW (Morse code) and Parks on the Air. There's something about getting out of the house, setting up a wire in the trees, and making contacts across the country on 10 watts that never gets old.
+I got into ham radio and dove pretty quickly into CW (Morse code) and Parks on the Air. There's something about getting out to a park, setting up a field antenna, and making contacts across the country, sometimes around the world, on 5 watts that never gets old.
 
 ## The Gear
 
-- **Radio:** Yaesu FT-817
-- **Antenna:** KM4CFT EFHW (30M/40M Links)
+- **Radios:** 
+Yaesu FT-817
+Penntek TR-35
+CFT1
+QRP Labs QMX
+QRP Labs QMX +
+QRP Labs QCX
+LNR Precision MTR3B V4 Currahee Mountain Topper
+FX4-CR by BG2FX
+Xiegu X6200
+Xiegu G90
+Elecraft K1
+Elecraft KH1
+Pebble HF
+tr uSDX
+- **Antennas:** KM4CFT EFHW (30M/40M Links)
 - **Power:** 5W QRP
 - **Logging:** Paper first, digital later
 
