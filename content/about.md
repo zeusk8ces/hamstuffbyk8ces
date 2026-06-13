@@ -26,10 +26,27 @@ I got into ham radio and dove pretty quickly into CW (Morse code) and Parks on t
   - Pebble HF
   - (tr)uSDX
   - Yaesu FT-891 (Mobile)
-- **Antennas:** 
+- **Keys**
+  - K8CES Zippy Paddle
+  - KM4CFT Iambic Paddle Kit
+  - KM4CFT KH1 Iambic Paddle Kit
+  - K6ARK Pico Paddle
+  - Palm Radio Pico Paddle
+  - Palm Radio Pico Single
+  - Palm Radio Mini Paddle
+  - Modern Morse Nameless V0H Stormtrooper
+  - N0SA RLP v1
+  - N0SA SOTA Paddle
+  - N3ZN ZN-QRP 5/16th's
+  - Begali Adventure Paddle with Magnetic Base
+  - KN4YB SL190RA Bug
+  - Vibroplex Champion Bug
+  - Vibroplex Lightning Bug
+  - Skillman Delux HSK Coffin Bug
+- **Antennas:**
   - KM4CFT EFHW (30M/40M Links)
   - Packtenna EFHW 20M + 40M Add On Link
-  - Packtenna EFRW 
+  - Packtenna EFRW
   - Spooltenna ULTRAEFHW-4010
   - W5CWT 49:1 EFHW (30M/40M Links)
   - Elecraft AX1 + AXE1
@@ -68,6 +85,6 @@ POTA activations are the main draw right now. I'm also into 3D printing — most
 
 ## This Site
 
-Field reports from activations, gear notes, printable designs, and whatever else seems worth writing down. YouTube channel for the video side of things.
+Field reports from activations, gear notes, printable designs, and whatever else seems worth writing down. YouTube is for the video side of things.
 
 72, Zeus K8CES
