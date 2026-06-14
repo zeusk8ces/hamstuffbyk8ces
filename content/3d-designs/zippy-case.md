@@ -24,10 +24,7 @@ A protective case for the Zippy paddles. Compact enough to fit in a go-kit.
 - STL files (https://www.thingiverse.com/thing:7270809)
 
 ### Gallery
-Add your photos here:
-- Case
-- With key inside
-- In-kit view
+*Photos coming soon*
 
 ### Assembly Notes
 Add a small amount of super glue to the magnet sockets. Press on 6mmx2mm magnets into one case. Then place another magnet onto of the ones just placed into the case. Taking the second case half, close both case halves together to ensure proper magnet orientation. 

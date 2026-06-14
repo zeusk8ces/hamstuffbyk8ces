@@ -13,7 +13,6 @@ A versatile knee board designed for portable field operation. Perfect for using 
 - Print time: ~5.5 hours
 - Filament: ~225 grams
 - Material: PETG
-- Dimensions: [Add your dimensions]
 
 ### Features
 - Integrated silicone mat for slip resistance
@@ -23,13 +22,10 @@ A versatile knee board designed for portable field operation. Perfect for using 
 - Adjustable straps
 
 ### Files & Downloads
-- STL file (coming soon)
+- STL file available on request
 
 ### Gallery
-Add your photos here:
-- Full assembly view
-- Detail shot
-- In-field use photo
+*Photos coming soon*
 
 ### Assembly Notes
 Once printed, there is a spot for the 2inch disk to be placed. It is a tight fit for obvious reasons. Press the disk into place, persuasion maybe necessary. 
