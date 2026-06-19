@@ -44,13 +44,15 @@ I was also testing out a new antenna I had just made and trimmed the wire for. S
 
 ## Setup
 
-I was parked and operating by 10:45 local. Setup took about 20 minutes — longer than I wanted, mostly because I'd forgotten I'd changed the linked dipole clip positions last fall and hadn't marked the 40m links clearly. Lesson noted: label everything.
+I pulled up to my usual activation site at Sleepy Hollow State Park. The park is very RF quite, so it is the perfect place to test out some new gear. 
 
 - **Antenna:** KM4CFT QRP EFHW Linked for 30M and 40M. Fed by a 15ft run of RG-316 from ABR Industries.
 - **Radio:** QMX was the perfect pairing for the new new board. Powered by a Nitecore NB Air 5000mah battery.
-- **Logging:** I turned to Ham2k PoLo for this activation. Although there should be enough space to hold a note pad on the board, I mainly plan to log on my phone when I use this set up.
+- **Logging:** Ham2k PoLo
 
-Spotted myself on through PoLo just after 23:00 on 10.114.5.
+I turned to PoLo for this activation. Although there should be enough space to hold a note pad on the board, I mainly plan to log on my phone when I use this set up.
+
+Spotted myself through PoLo just after 23:00 on 10.114.5.
 
 ## 30 Meters
 
