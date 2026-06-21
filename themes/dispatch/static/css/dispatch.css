@@ -743,6 +743,49 @@ body {
 }
 .photo-slot img:hover { opacity: 0.88; }
 
+/* ────────────────────────────────────────────
+   PHOTO TILES (/photos/ gallery)
+──────────────────────────────────────────── */
+.photo-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.photo-tile {
+  margin: 0;
+  background: var(--cream-mid);
+  border: 1px solid var(--cream-border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.photo-tile-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.photo-tile img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  transition: opacity 0.2s;
+}
+.photo-tile:hover img { opacity: 0.9; }
+.photo-tile-plate {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 12px;
+  color: var(--ink);
+  text-align: center;
+  padding: 12px 14px;
+  border-top: 1px solid var(--cream-border);
+  background: var(--cream);
+}
+
+@media (max-width: 720px) {
+  .photo-tiles { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .photo-tile-plate { font-size: 11px; padding: 10px; }
+}
+
 
 /* ────────────────────────────────────────────
    FOOTER

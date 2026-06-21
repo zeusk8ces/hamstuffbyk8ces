@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+<div class="page-header">
+  <p class="page-overline">{{ $.Site.Params.callsign }}</p>
+  <h1 class="page-title">{{ .Title }}</h1>
+  {{ with .Content }}<p class="page-subtitle">{{ . }}</p>{{ end }}
+  <div class="page-rule"></div>
+</div>
+
+<div class="photo-tiles">
+  {{ range .Resources.ByType "image" }}
+  {{ $name := path.BaseName .Name }}
+  {{ $thumb := .Fill "600x600 Center q82" }}
+  <figure class="photo-tile">
+    <a href="{{ .RelPermalink }}" target="_blank" rel="noopener" class="photo-tile-link">
+      <img src="{{ $thumb.RelPermalink }}"
+           width="{{ $thumb.Width }}" height="{{ $thumb.Height }}"
+           alt="{{ $name }}" loading="lazy">
+      <figcaption class="photo-tile-plate">{{ $name }}</figcaption>
+    </a>
+  </figure>
+  {{ end }}
+</div>
+
+{{ end }}
