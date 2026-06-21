@@ -2,6 +2,8 @@
 title: "Zippy Case"
 description: "A protective case for your Zippy paddle."
 date: 2026-01-27
+gallery:
+  - "Zippy case.jpg"
 ---
 
 ## Zippy Case
@@ -22,9 +24,6 @@ A protective case for the Zippy paddles. Compact enough to fit in a go-kit.
 
 ### Files & Downloads
 - STL files (https://www.thingiverse.com/thing:7270809)
-
-### Gallery
-*Photos coming soon*
 
 ### Assembly Notes
 Add a small amount of super glue to the magnet sockets. Press on 6mmx2mm magnets into one case. Then place another magnet onto of the ones just placed into the case. Taking the second case half, close both case halves together to ensure proper magnet orientation. 

@@ -781,6 +781,14 @@ body {
   background: var(--cream);
 }
 
+.design-gallery-heading {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 26px;
+  color: var(--od-green);
+  margin: 36px 0 16px;
+}
+.design-gallery { grid-template-columns: repeat(2, 1fr); }
+
 @media (max-width: 720px) {
   .photo-tiles { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .photo-tile-plate { font-size: 11px; padding: 10px; }

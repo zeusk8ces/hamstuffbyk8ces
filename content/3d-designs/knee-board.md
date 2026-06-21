@@ -2,6 +2,9 @@
 title: "QRP Knee Board"
 description: "Radio and key mounting for portable operation"
 date: 2026-05-25
+gallery:
+  - "Knee board.jpg"
+  - "CFT1 and Knee board.jpg"
 ---
 
 ## Knee Board
@@ -23,9 +26,6 @@ A versatile knee board designed for portable field operation. Perfect for using 
 
 ### Files & Downloads
 - STL file available on request
-
-### Gallery
-*Photos coming soon*
 
 ### Assembly Notes
 Once printed, there is a spot for the 2inch disk to be placed. It is a tight fit for obvious reasons. Press the disk into place, persuasion maybe necessary. 

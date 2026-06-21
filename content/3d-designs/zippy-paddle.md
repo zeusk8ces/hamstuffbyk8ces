@@ -2,6 +2,8 @@
 title: "Zippy Paddle"
 description: "Compact CW paddle for portable operation"
 date: 2025-12-30
+gallery:
+  - "Zippy.jpg"
 ---
 
 ## Zippy Paddle
@@ -23,9 +25,6 @@ A compact, portable CW (Morse code) paddle designed for field operation. This de
 
 ### Files & Downloads
 - STL file (https://www.thingiverse.com/thing:7255380)
-
-### Gallery
-*Photos coming soon*
 
 ### Assembly Notes
 When assembling the components, I recommend beginning with installing the threaded inserts on the top of the key. I like to install the 2 back inserts about 90% of the way with a soldering iron, and then turn the top around and press it flat against a flat surface. This ensures the inserts are installed and aligned as flat as possible to make assembly easier. With the center insert in the front (used to anchor the standoff to the top) I get it 90% installed with the soldering iron, then finish pressing in the insert with the something flat like the top of a x-acto blade holder (whatever you can fit that is flat to help get the insert square). Install the M2x16mm standoff to the top and ensure it is straight. Some finesse may be required to get it aligned. 

@@ -1,0 +1,52 @@
+{{ define "main" }}
+
+<div class="page-header">
+  <p class="page-overline">{{ $.Site.Params.callsign }}</p>
+  <h1 class="page-title">{{ .Title }}</h1>
+  <div class="page-rule"></div>
+</div>
+
+<div class="content-grid">
+  <main class="main-col page-body">
+    {{ .Content }}
+
+    {{ with .Params.gallery }}
+    <h3 class="design-gallery-heading">Gallery</h3>
+    <div class="photo-tiles design-gallery">
+      {{ range . }}
+      {{ $img := resources.Get (printf "images/3d-designs/%s" .) }}
+      {{ with $img }}
+      {{ $name := path.BaseName .Name }}
+      {{ $thumb := .Fill "600x600 Center q82" }}
+      <figure class="photo-tile">
+        <a href="{{ .RelPermalink }}" target="_blank" rel="noopener" class="photo-tile-link">
+          <img src="{{ $thumb.RelPermalink }}"
+               width="{{ $thumb.Width }}" height="{{ $thumb.Height }}"
+               alt="{{ $name }}" loading="lazy">
+          <figcaption class="photo-tile-plate">{{ $name }}</figcaption>
+        </a>
+      </figure>
+      {{ else }}
+      {{ warnf "design gallery: image not found: images/3d-designs/%s (in %s)" . $.File.Path }}
+      {{ end }}
+      {{ end }}
+    </div>
+    {{ end }}
+  </main>
+  <aside class="rail-col">
+    <div class="rail-block">
+      <div class="rail-rule"></div>
+      <p class="rail-label">Quick Links</p>
+      <div class="quick-links">
+        <a href="{{ "/3d-designs/" | relURL }}" class="quick-link">
+          <span>All Designs</span><span class="quick-link-arrow">→</span>
+        </a>
+        <a href="{{ .Site.Params.youtube }}" target="_blank" rel="noopener" class="quick-link">
+          <span>YouTube</span><span class="quick-link-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+</div>
+
+{{ end }}
