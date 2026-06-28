@@ -33,7 +33,7 @@ weather: "Sunny, 80°F, light breeze, no rain"
 
 # ── Media ─────────────────────────────────
 youtube_url: "https://youtu.be/TgQ8OXEjrYs?si=JmPTTtw_MO7IexE3"
-# photos: ["no photos this time"]
+photos: ["Knee Board Test Run.JPG"]
 
 tags: ["POTA", "CW", "QMX", "QRP", "Michigan", "30m", "Activated"]
 ---

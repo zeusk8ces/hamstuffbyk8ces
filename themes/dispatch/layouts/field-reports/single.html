@@ -52,6 +52,21 @@
     {{ end }}
   </header>
 
+  {{ with .Params.photos }}
+  <section class="photo-strip">
+    <div class="photo-strip-header">
+      <h2 class="photo-strip-heading">Photos</h2>
+    </div>
+    <div class="photo-grid">
+      {{ range . }}
+      <div class="photo-slot">
+        <img src="{{ printf "/photos/%s" . | relURL }}" alt="{{ printf "%s photo" $.Title }}">
+      </div>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
   {{/* ── TWO-COLUMN BODY ── */}}
   <div class="content-grid">
     <div class="main-col report-body">

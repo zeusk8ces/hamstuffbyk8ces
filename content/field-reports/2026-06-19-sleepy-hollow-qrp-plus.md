@@ -30,6 +30,7 @@ weather: "Mid-June Michigan summer evening"
 
 # ── Media ─────────────────────────────────
 youtube_url: "https://www.youtube.com/watch?v=loF2BOPnOUg"
+photos: ["antenna view.jpg", "Index labs QRP Plus.jpg", "station set up.jpg"]
 
 tags: ["POTA", "CW", "QRP Plus", "QRP", "Michigan", "40m", "30m", "20m",    "Activated"]
 ---
@@ -69,7 +70,7 @@ Total time on air: 57 minutes.
 
 ## Notes for Next Time
 
-- Get out earlier or pick a day with better cooperation from the bands. 20m and even 17m or 15m could be a lot of fun with the QRP. This evening the low bands were clearly where the action was.
+Get out earlier or pick a day with better cooperation from the bands. 20m and even 17m or 15m could be a lot of fun with the QRP. This evening the low bands were clearly where the action was.
 
 ## Overall
 

@@ -119,15 +119,22 @@
     <a href="{{ "/photos/" | relURL }}" class="photo-strip-link">View all →</a>
   </div>
   <div class="photo-grid">
-    {{/*
-      Replace these divs with <img> tags once you have photos:
-      <div class="photo-slot"><img src="/photos/your-image.jpg" alt="Description"></div>
-    */}}
-    <div class="photo-slot"></div>
-    <div class="photo-slot"></div>
-    <div class="photo-slot"></div>
-    <div class="photo-slot"></div>
-    <div class="photo-slot"></div>
+    {{ with .Site.GetPage "section" "photos" }}
+      {{ $photos := .Resources.Match "*" }}
+      {{ range first 5 $photos }}
+      <div class="photo-slot">
+        <a href="{{ $.RelPermalink }}photos/{{ .Name | urlize }}">
+          <img src="{{ .RelPermalink }}" alt="{{ .Name }}">
+        </a>
+      </div>
+      {{ end }}
+    {{ else }}
+      <div class="photo-slot"></div>
+      <div class="photo-slot"></div>
+      <div class="photo-slot"></div>
+      <div class="photo-slot"></div>
+      <div class="photo-slot"></div>
+    {{ end }}
   </div>
 </section>
 
