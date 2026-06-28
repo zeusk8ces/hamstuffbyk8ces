@@ -9,27 +9,24 @@ gallery:
 ## Transformer Mount
 
 ### Description
-A robust mounting bracket designed to securely hold power transformers and audio transformers during portable field operations. Prevents shifting and damage to delicate transformer components during transport and use.
+My spin for a compact design for mounting a 49:1 or 9:1 transformer for wire antennas. 
 
 ### Specifications
-- Print time: ~3 hours
-- Filament: ~85-100 grams
+- Print time: >0.5 hours
+- Filament: ~10 grams
 - Material: PETG
 
 ### Features
-- Secure clamping mechanism
-- Mounting points for standard radio bracket systems
-- Vibration dampening design
-- Compact footprint for portable setups
-- Works with common transformer sizes
+- Toroid mounting for a combination of FT83-43 and FT50-43
+- BNC mounting bracket
+- 2mm banana jack slots for the radiating element and the counterpoise
+- Compact and lightweight design
 
 ### Files & Downloads
 - STL file (https://www.thingiverse.com/thing:7372973)
 
 ### Assembly Notes
-Print the mount and base as separate pieces. Use M3 screws to secure the clamping mechanism. The tolerances are designed to be snug, so assembly may require some careful alignment.
-
-Mount the transformer using the provided slots and secure with the clamping mechanism. The design provides clearance for transformer leads and connections.
+Pre solder your banana jacks before installing. Slip the banana jacks into their corresponding slots. Then carefully and swiftly solder the wire from the wound toroid onto the jacks. There is a slot that allows the wound toroid to be secured to the print or you can heat shrink it. Whichever you prefer.
 
 ### Notes
-This mount keeps your transformers stable and protected during portable operations, reducing the risk of ground loops and intermittent connections from vibration.
+This transformer mount is just another solution out of many to mount your antenna feed point in a small and compact form factor. Perfect for the QRP operator. 

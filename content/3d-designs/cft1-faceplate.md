@@ -18,18 +18,14 @@ A custom protective faceplate designed specifically for the CFT1 transceiver. Pr
 
 ### Features
 - Precise fit for CFT1 controls
-- Protective coverage during transport
-- Easy on/off design
-- Maintains access to essential controls
-- Integrated ventilation slots
+- Protective coverage for essential controls during transport
+- Magnetically attaches to faceplate screws on the radio
 
 ### Files & Downloads
 - STL file (https://www.thingiverse.com/thing:7372979)
 
 ### Assembly Notes
-This design prints as a single piece with no assembly required. Test fit with your CFT1 unit before deploying to the field. Minor sanding of contact points may be necessary for optimal fit.
-
-The faceplate can be left on during operation or quickly removed when needed. The design ensures no interference with normal operating procedures.
+This design prints as a single piece. Supports are necessary for this print. Test fit with your CFT1 unit before installing magnets to ensure fit. I recommend swapping the original screws for these M3x8mm Hex head screws (https://a.co/d/08jdAPqa) so the magnets stick on a bit stronger.
 
 ### Notes
-Protect your CFT1's front panel from dust, moisture, and accidental impacts during field operations with this purpose-built faceplate.
+Protect your CFT1's front panel from being smacked around in transport or accidental impacts during your station set up with this purpose-built faceplate.
