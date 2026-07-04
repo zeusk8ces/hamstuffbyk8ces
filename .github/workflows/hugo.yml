@@ -40,6 +40,18 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install image detection deps
+        run: npm ci
+
+      - name: Compute image crop positions
+        run: node scripts/detect-image-positions.mjs
+
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production

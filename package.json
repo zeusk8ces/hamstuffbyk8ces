@@ -1,0 +1,13 @@
+{
+  "name": "hamstuffbyk8ces-image-positions",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "detect": "node scripts/detect-image-positions.mjs"
+  },
+  "dependencies": {
+    "@tensorflow-models/coco-ssd": "^2.2.3",
+    "@tensorflow/tfjs": "^4.22.0",
+    "sharp": "^0.34.1"
+  }
+}

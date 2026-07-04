@@ -17,12 +17,13 @@
       {{ $img := resources.Get (printf "images/3d-designs/%s" .) }}
       {{ with $img }}
       {{ $name := path.BaseName .Name }}
-      {{ $thumb := .Fill "600x600 Center q82" }}
+      {{ $thumb := .Resize "600x q82" }}
       <figure class="photo-tile">
         <a href="{{ .RelPermalink }}" target="_blank" rel="noopener" class="photo-tile-link">
           <img src="{{ $thumb.RelPermalink }}"
                width="{{ $thumb.Width }}" height="{{ $thumb.Height }}"
-               alt="{{ $name }}" loading="lazy">
+               alt="{{ $name }}" loading="lazy"
+               style="object-position: {{ partial "image-position.html" (dict "section" "3d-designs" "name" (path.Base .Name)) }}">
           <figcaption class="photo-tile-plate">{{ $name }}</figcaption>
         </a>
       </figure>

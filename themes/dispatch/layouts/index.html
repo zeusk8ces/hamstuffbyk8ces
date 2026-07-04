@@ -122,9 +122,11 @@
     {{ with .Site.GetPage "section" "photos" }}
       {{ $photos := .Resources.Match "*" }}
       {{ range first 5 $photos }}
+      {{ $thumb := .Resize "600x q82" }}
       <div class="photo-slot">
         <a href="{{ $.RelPermalink }}photos/{{ .Name | urlize }}">
-          <img src="{{ .RelPermalink }}" alt="{{ .Name }}">
+          <img src="{{ $thumb.RelPermalink }}" alt="{{ .Name }}"
+               style="object-position: {{ partial "image-position.html" (dict "section" "photos" "name" .Name) }}">
         </a>
       </div>
       {{ end }}

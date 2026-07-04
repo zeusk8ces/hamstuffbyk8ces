@@ -1,0 +1,7 @@
+{{- /* Look up a precomputed object-position for an image.
+     Expects (dict "section" "photos"|"3d-designs" "name" <filename>).
+     Data comes from data/image_positions.json, written by
+     scripts/detect-image-positions.mjs. Falls back to center. */ -}}
+{{- $data := default (dict) (index site.Data "image_positions") -}}
+{{- $section := default (dict) (index $data .section) -}}
+{{- with index $section .name -}}{{ .x }}% {{ .y }}%{{- else -}}50% 50%{{- end -}}

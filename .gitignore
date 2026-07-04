@@ -3,6 +3,9 @@ public/
 resources/_gen/
 .hugo_build.lock
 
+# Node (image position detection)
+node_modules/
+
 # macOS
 .DS_Store
 
